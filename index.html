@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>419 - Discover Amazing Video Content</title>
+    <meta name="description" content="Watch, share, and discover the most entertaining videos from creators around the world on 419">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body class="dark-theme">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-logo">419</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1 class="logo">419</h1>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#trending" class="nav-link">Trending</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#about" class="nav-link">About</a>
+                
+                <!-- Chi Town Promo Button -->
+                <button class="chi-town-btn" id="chi-town-btn">
+                    <span class="btn-text">Chi Town</span>
+                    <div class="btn-glow"></div>
+                </button>
+                
+                <button class="theme-toggle" id="theme-toggle">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                
+                <button class="auth-btn" id="login-btn">Login</button>
+                <button class="auth-btn primary" id="signup-btn">Sign Up</button>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Discover Amazing Video Content</h1>
+                <p class="hero-description">Watch, share, and discover the most entertaining videos from creators around the world</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Start Watching</button>
+                    <button class="btn btn-outline">Upload Video</button>
+                </div>
+            </div>
+            <div class="hero-video">
+                <div class="video-placeholder">
+                    <div class="play-button">▶</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="categories">
+            <div class="container">
+                <h2 class="section-title">Browse Categories</h2>
+                <div class="category-grid">
+                    <div class="category-card" data-category="gaming">
+                        <div class="category-icon">🎮</div>
+                        <h3>Gaming</h3>
+                        <p>Epic gameplay moments</p>
+                    </div>
+                    <div class="category-card" data-category="sports">
+                        <div class="category-icon">⚽</div>
+                        <h3>Sports</h3>
+                        <p>Amazing athletic feats</p>
+                    </div>
+                    <div class="category-card" data-category="funny">
+                        <div class="category-icon">😂</div>
+                        <h3>Funny</h3>
+                        <p>Hilarious moments</p>
+                    </div>
+                    <div class="category-card" data-category="trending">
+                        <div class="category-icon">🔥</div>
+                        <h3>Trending</h3>
+                        <p>What's hot right now</p>
+                    </div>
+                    <div class="category-card" data-category="music">
+                        <div class="category-icon">🎵</div>
+                        <h3>Music</h3>
+                        <p>Beats and melodies</p>
+                    </div>
+                    <div class="category-card" data-category="lifestyle">
+                        <div class="category-icon">✨</div>
+                        <h3>Lifestyle</h3>
+                        <p>Daily inspiration</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Videos -->
+        <section id="trending" class="featured-videos">
+            <div class="container">
+                <h2 class="section-title">Featured Videos</h2>
+                <div class="video-grid" id="video-grid">
+                    <!-- Videos will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Upload Section -->
+        <section class="upload-section">
+            <div class="container">
+                <div class="upload-card">
+                    <h2>Share Your Story</h2>
+                    <p>Upload your videos and join our community of creators</p>
+                    <button class="btn btn-primary">Upload Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>419</h3>
+                    <p>The future of video sharing</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#trending">Trending</a>
+                    <a href="#categories">Categories</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 419. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-login">&times;</span>
+            <div class="auth-container">
+                <h2>Welcome Back</h2>
+                <form id="login-form" class="auth-form">
+                    <div class="form-group">
+                        <input type="email" id="login-email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="login-password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Login</button>
+                </form>
+                <p class="auth-switch">Don't have an account? <a href="#" id="switch-to-signup">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-signup">&times;</span>
+            <div class="auth-container">
+                <h2>Join 419</h2>
+                <form id="signup-form" class="auth-form">
+                    <div class="form-group">
+                        <input type="text" id="signup-username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="signup-email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="signup-password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Sign Up</button>
+                </form>
+                <p class="auth-switch">Already have an account? <a href="#" id="switch-to-login">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Player Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content video-modal-content">
+            <span class="close" id="close-video">&times;</span>
+            <div class="video-player">
+                <div class="video-placeholder large">
+                    <div class="play-button large">▶</div>
+                </div>
+                <div class="video-info">
+                    <h3 id="video-title">Video Title</h3>
+                    <p id="video-description">Video description goes here...</p>
+                    <div class="video-stats">
+                        <span id="video-views">1.2M views</span>
+                        <span id="video-likes">45K likes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
